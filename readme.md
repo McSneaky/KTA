@@ -5,5 +5,5 @@ Github, et aru saada, kes meie koodi muudab
 <br />
 <br />
 NIMI - DISCORD - GITHUB <br />
-Jüri - Jüri https://github.com/McSneaky/KTA
+Jüri - Jüri <br />
 Margus Kevin Sünter - McSneaky/Kevin - McSneaky <br />
