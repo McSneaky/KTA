@@ -2,6 +2,6 @@ Siia palun kirja oma nimi (kohustuslik :P ) Discordi nimi (kui on), Githubi nimi
 Nimi, et näha, kes said GITi käima
 Discord, et aru saada kellega räägime
 Github, et aru saada, kes meie koodi muudab
-
-NIMI - DISCORD - GITHUB
-Margus Kevin Sünter - McSneaky/Kevin - McSneaky
+<br />
+NIMI - DISCORD - GITHUB <br />
+Margus Kevin Sünter - McSneaky/Kevin - McSneaky <br />
