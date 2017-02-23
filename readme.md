@@ -3,5 +3,6 @@ Nimi, et näha, kes said GITi käima
 Discord, et aru saada kellega räägime
 Github, et aru saada, kes meie koodi muudab
 <br />
+<br />
 NIMI - DISCORD - GITHUB <br />
 Margus Kevin Sünter - McSneaky/Kevin - McSneaky <br />
