@@ -7,3 +7,4 @@ Github, et aru saada, kes meie koodi muudab
 NIMI - DISCORD - GITHUB <br />
 Jüri - Jüri <br />
 Margus Kevin Sünter - McSneaky/Kevin - McSneaky <br />
+Hedi - tralla - Audiohiis <br />
