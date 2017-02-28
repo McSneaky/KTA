@@ -8,4 +8,5 @@ NIMI - DISCORD - GITHUB <br />
 Jüri - Jüri <br />
 Margus Kevin Sünter - McSneaky/Kevin - McSneaky <br />
 Hedi - tralla - Audiohiis <br />
-Beatrice - puudub - BeatriceT
+Beatrice - puudub - BeatriceT <br />
+Rasmus - puudub - rasmusprees <br />
