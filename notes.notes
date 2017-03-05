@@ -1,0 +1,50 @@
+KTA:
+	->Config
+		->Database
+		->Exp rates
+		->Speed
+		->Weather
+		->Spawn counter
+	->Admin
+		->Banhammer
+	->Map
+		->Things
+		->Players
+		->Pixel art vms
+	->Helpers
+		->Convert time jne
+	->Img
+	->JS
+	->CSS
+	->Sound
+	->Data
+		->Entity
+			->Interactions(with others)
+				->Rob
+				->Kill
+				->Trade
+				->Help
+			->Interactions(with map)
+				->Move
+				->etc
+			->Player
+				->Build things
+			->Animals
+			->Tools
+				->Condition
+				->Stat boost
+		->Resources
+			->Stone
+			->Food
+			->Wood
+	->Minigames
+		->Do stuff
+		->Give some stat boos or something
+
+
+Login, register jne
+User
+Loomi teha
+Tööriistu teha
+Kaart
+Disain
