@@ -1,4 +1,6 @@
-Discordi link: https://discord.gg/j3JXfn4 <br />
+﻿Discordi link: https://discord.gg/j3JXfn4 <br />
+Mindmeister mõttepuu: https://www.mindmeister.com/852008869?t=4t9E89pCWm
+
 
 Siia palun kirja oma nimi (kohustuslik :P ) Discordi nimi (kui on), Githubi nimi (suht kohustuslik aga pole vaja :D )
 Nimi, et näha, kes said GITi käima
