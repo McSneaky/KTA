@@ -14,5 +14,5 @@ Beatrice - puudub - BeatriceT <br />
 Rasmus - puudub - rasmusprees <br />
 Annika - puudub - ARaie <br />
 Martin - martpa - LongEzLand</br>
-Krista - puudub - KristaJaanus
+Krista - puudub - KristaJaanus</br>
 Kevin - KevBeans - KevBeans
