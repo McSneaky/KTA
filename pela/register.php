@@ -3,6 +3,7 @@ session_start();
 
 if(isset($_SESSION['usr_id'])) {
 	header("Location: index.php");
+	die();
 }
 
 $config = include_once 'config.php';

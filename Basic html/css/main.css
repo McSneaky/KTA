@@ -1,0 +1,35 @@
+/* Comment */
+
+/* . (dot) is used to select classes */
+.myElement{
+	background-color: red;
+}
+
+/* # (hashtag) is used to select ids */
+#kast{
+	background-color: blue;
+}
+
+.valge{
+	color: white;
+}
+
+#map{
+	background-image: url("../images/kaart.jpg");
+	background-repeat: round;
+}
+
+/* Just type is used to select all elements of given type*/
+table tr td{
+	border: 1px solid black;
+}
+
+/*
+More selectors:
+	* - Selects all elements
+	p - Selects all <p> elements
+	div, p - Selects all <div> and <p> elements
+	div p - Selects all <p> elements inside <div>
+	div > p - Selects all <p> elements where parent is <div>
+	div:hover - Selects div element that is hovered on
+ */

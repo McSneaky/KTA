@@ -4,6 +4,7 @@ session_start();
 // If user is already logged in, then redirect to index.php
 if(isset($_SESSION['usr_id'])!="") {
 	header("Location: index.php");
+	die();
 }
 
 $config = include_once './config.php';
