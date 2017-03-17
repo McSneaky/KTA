@@ -17,5 +17,4 @@ Rasmus - puudub - rasmusprees <br />
 Annika - puudub - ARaie <br />
 Martin - martpa - LongEzLand</br>
 Krista - puudub - KristaJaanus</br>
-Kevin - KevBeans - KevBeans <br />
-Aimar - AimarT <br />
+Kevin - KevBeans - KevBeans

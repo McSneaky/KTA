@@ -3,6 +3,6 @@
 return (object) array(
 	'host' => 'localhost',
 	'username' => 'root',
-	'password' => 'SmartMedia21',
+	'password' => '',
 	'database' => 'kta',
 );
