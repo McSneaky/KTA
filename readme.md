@@ -1,3 +1,5 @@
+Discordi link: https://discord.gg/j3JXfn4 <br />
+
 Siia palun kirja oma nimi (kohustuslik :P ) Discordi nimi (kui on), Githubi nimi (suht kohustuslik aga pole vaja :D )
 Nimi, et n‰ha, kes said GITi k‰ima
 Discord, et aru saada kellega r‰‰gime
