@@ -1,5 +1,7 @@
 <?php
 
+require_once "Character.php";
+
 class User {
 	
     //kasutajanimi

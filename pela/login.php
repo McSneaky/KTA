@@ -1,4 +1,8 @@
 <?php
+
+// Require user
+require_once './user_character/User.php';
+
 session_start();
 
 // If user is already logged in, then redirect to index.php
@@ -28,9 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	// Some random bulli kaka
 	if ($row = mysqli_fetch_array($result)) {
-		$_SESSION['usr_id'] = $row['id'];
-		$_SESSION['usr_name'] = $row['name'];
+		$_SESSION['user'] = serialize(new User($row['name'], $row['email']));
 		header("Location: index.php");
+		die();
 	} else {
 		$errormsg = "Incorrect Email or Password!";
 	}

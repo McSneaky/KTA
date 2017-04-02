@@ -1,5 +1,5 @@
 <?php
-
+require_once 'Location.php';
 class Character {
     
     private $name;
@@ -35,7 +35,7 @@ class Character {
     public function setType($type) {
         $this-> type = $type;
     }
-    $Character->location->moveUp();
+
     public function setExpPoints($expPoints) {
         $this-> expPoints = $expPoints;
     }

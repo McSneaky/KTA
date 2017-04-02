@@ -12,10 +12,18 @@ include_once './dbconnect.php';
 </head>
 <body>
 	<!-- Check if user is logged in or not -->
-	<?php if (isset($_SESSION['usr_id'])) : ?>
-
+	<?php if (isset($_SESSION['user'])) : ?>
+		
 		<!-- If user is logged in, then show logout and user name -->
-		<p>Signed in as <?php echo $_SESSION['usr_name']; ?></p><br>
+		<p>Signed in as 
+			<pre>
+				<?php (var_dump(unserialize($_SESSION["user"]))); ?>	
+			</pre>
+		</p>
+		<br>
+
+		<pre>
+
 		<a href="./logout.php">Log Out</a>
 
 	<?php else : ?>
