@@ -1,7 +1,9 @@
 <?php
-session_start();
 $config = include_once './config.php';
+include_once './user_character/User.php';
 include_once './dbconnect.php';
+
+session_start();
 
 ?>
 
@@ -13,14 +15,17 @@ include_once './dbconnect.php';
 <body>
 	<!-- Check if user is logged in or not -->
 	<?php if (isset($_SESSION['user'])) : ?>
-		
 		<!-- If user is logged in, then show logout and user name -->
 		<p>Signed in as 
 			<pre>
-				<?php (var_dump(unserialize($_SESSION["user"]))); ?>	
+				<?php var_dump($_SESSION["user"]); ?>
 			</pre>
 		</p>
 		<br>
+
+		<!-- Map tabel tuleb siia -->
+		<!-- Siia peaks tulema tabel -->
+		<!-- Tabeli iga ruudu sisse kaardi taust -->
 
 		<pre>
 

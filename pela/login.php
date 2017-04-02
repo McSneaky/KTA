@@ -2,6 +2,8 @@
 
 // Require user
 require_once './user_character/User.php';
+$config = include_once './config.php';
+include_once './dbconnect.php';
 
 session_start();
 
@@ -10,9 +12,6 @@ if(isset($_SESSION['usr_id'])!="") {
 	header("Location: index.php");
 	die();
 }
-
-$config = include_once './config.php';
-include_once './dbconnect.php';
 
 // Check if there was POST request to current page
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -32,7 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	// Some random bulli kaka
 	if ($row = mysqli_fetch_array($result)) {
-		$_SESSION['user'] = serialize(new User($row['name'], $row['email']));
+		$user = new User($row['name'], $row['email']);
+		$_SESSION['user'] =& $user;
 		header("Location: index.php");
 		die();
 	} else {

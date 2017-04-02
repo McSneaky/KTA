@@ -14,7 +14,7 @@ class User {
     public function __construct($username, $email) {
         $this-> username = $username;
         $this-> email = $email;
-        $this-> character = new Character();
+        // $this-> character = new Character();
     }
  
     public function getUsername() {
@@ -40,6 +40,4 @@ class User {
     public function setCharacter(Character $character) {
         $this-> character = $character;
     }
-    
-	
 }
