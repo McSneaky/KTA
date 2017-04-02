@@ -21,7 +21,35 @@ include_once './dbconnect.php';
 			</pre>
 		</p>
 		<br>
-
+<table class="demo">
+	<tbody>
+	<tr>
+		<td><img src="./img/green.png" alt="Smiley face" height="42" width="42"></td>
+		<td><img src="./img/yellow.png" alt="Smiley face" height="42" width="42"></td>
+		<td><img src="./img/blue.png" alt="Smiley face" height="42" width="42"></td>
+		<td><img src="./img/red.png" alt="Smiley face" height="42" width="42"></td>
+	
+	</tr>
+	<tr>
+		<td><img src="./img/green.png" alt="Smiley face" height="42" width="42"></td>
+		<td><img src="./img/yellow.png" alt="Smiley face" height="42" width="42"></td>
+		<td><img src="./img/blue.png" alt="Smiley face" height="42" width="42"></td>
+		<td><img src="./img/red.png" alt="Smiley face" height="42" width="42"></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	</tbody>
+</table>
 		<pre>
 
 		<a href="./logout.php">Log Out</a>
