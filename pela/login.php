@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// Some random bulli kaka
 	if ($row = mysqli_fetch_array($result)) {
 		$user = new User($row['name'], $row['email']);
-		$_SESSION['user'] =& $user;
+		$_SESSION['user'] = $user;
 		header("Location: index.php");
 		die();
 	} else {

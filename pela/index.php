@@ -23,10 +23,23 @@ session_start();
 		</p>
 		<br>
 
-		<!-- Map tabel tuleb siia -->
-		<!-- Siia peaks tulema tabel -->
-		<!-- Tabeli iga ruudu sisse kaardi taust -->
-
+<table class="demo">
+	<tbody>
+	<tr>
+		<td><img src="./img/green.png" alt="Smiley face" height="42" width="42"></td>
+		<td><img src="./img/yellow.png" alt="Smiley face" height="42" width="42"></td>
+		<td><img src="./img/blue.png" alt="Smiley face" height="42" width="42"></td>
+		<td><img src="./img/red.png" alt="Smiley face" height="42" width="42"></td>
+	
+	</tr>
+	<tr>
+		<td><img src="./img/green.png" alt="Smiley face" height="42" width="42"></td>
+		<td><img src="./img/yellow.png" alt="Smiley face" height="42" width="42"></td>
+		<td><img src="./img/blue.png" alt="Smiley face" height="42" width="42"></td>
+		<td><img src="./img/red.png" alt="Smiley face" height="42" width="42"></td>
+	</tr>
+	</tbody>
+</table>
 		<pre>
 
 		<a href="./logout.php">Log Out</a>
