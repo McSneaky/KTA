@@ -15,8 +15,8 @@ class Tool {
     
     /**
      * Construcor used at creating new instance
-     * @param [type] $config [description]
-     * @param [type] $damage [description]
+     * @param Object 	$config 	Tool config data
+     * @param Integer 	$damage 	Damage of tool, if null take random
      */
     function __construct ($config, $damage = null) {
     	// Get one object from config
