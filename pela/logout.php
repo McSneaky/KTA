@@ -6,7 +6,9 @@ if(isset($_SESSION['usr_id'])) {
 	unset($_SESSION['usr_id']);
 	unset($_SESSION['usr_name']);
 	header("Location: index.php");
+	die();
 } else {
 	header("Location: index.php");
+	die();
 }
 ?>

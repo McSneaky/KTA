@@ -6,3 +6,4 @@ return (object) array(
 	'password' => '',
 	'database' => 'kta',
 );
+
