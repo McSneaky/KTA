@@ -35,8 +35,7 @@ class Character {
     public function setType($type) {
         $this-> type = $type;
     }
-  
-   
+
     public function setExpPoints($expPoints) {
         $this-> expPoints = $expPoints;
     }

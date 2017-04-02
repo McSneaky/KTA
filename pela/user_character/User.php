@@ -1,6 +1,8 @@
 <?php
 require_once "Character.php";
 
+require_once "Character.php";
+
 class User {
 	
     //kasutajanimi
@@ -39,6 +41,4 @@ class User {
     public function setCharacter(Character $character) {
         $this-> character = $character;
     }
-    
-	
 }
