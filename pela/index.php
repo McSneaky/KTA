@@ -25,19 +25,46 @@ session_start();
 
 <table cellpadding="0" cellspacing="0">
 	<tbody>
-	<tr>
-		<td><img src="./img/green.png" alt="green" height="42" width="42"></td>
-		<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
+    <tr>
 		<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+     </tr><tr>
+		<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+        <td><img src="./img/green.png" alt="green" height="42" width="42"></td>
+		<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
 		<td><img src="./img/red.png" alt="red" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
 	
 	</tr><tr>
-		<td><img src="./img/green.png" alt="green" height="42" width="42"></td>
+		<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
 		<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		<td><img src="./img/red.png" alt="red" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
 	
-	</tr>
+    </tr><tr>
+		<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		<td><img src="./img/red.png" alt="red" height="42" width="42"></td>
+        <td><img src="./img/green.png" alt="green" height="42" width="42"></td>
+		<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+	
+    </tr><tr>
+		<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+        <td><img src="./img/green.png" alt="green" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+    </tr><tr>
+		<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+     </tr>
 	</tbody>
 </table>
 		<pre>
