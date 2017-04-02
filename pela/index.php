@@ -15,7 +15,7 @@ session_start();
 
 	<!-- Some fast inline CSS -->
 	<style type="text/css">
-	
+
 		/* 
 		 * Current user location
 		 *  
@@ -90,6 +90,11 @@ session_start();
 		     </tr>
 			</tbody>
 		</table>
+
+		<button>↓</button>
+		<button>↑</button>
+		<button>→</button>
+		<button>←</button>
 
 		<!-- Show log out link -->
 		<a href="./logout.php">Log Out</a>
