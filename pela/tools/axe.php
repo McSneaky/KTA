@@ -11,6 +11,7 @@ class Axe {
     public $name;
     public $type;
     public $weight;
+    public $wood;
     
     function __construct ($d, $de, $cw, $cd, $ct, $l, $m, $n, $t, $w) {
         $this->damage = $d;
@@ -23,11 +24,13 @@ class Axe {
         $this->name = $n;
         $this->type = $t;                
         $this->weight = $w;
+        $this->wood = new Wood(50);
     }
         
 }
 
-$Tool = new Axe (40, 10, 0, 20, "none", "day", "metal / wood", "Axe", "tool", 20);
+$puit = new wood(50);
+$Tool = new Axe (40, 10, 0, 20, "none", "day", $puit, "metal / wood", "Axe", "tool", 20);
 
 echo "<pre>\n";
 echo "Axe values:\n";
