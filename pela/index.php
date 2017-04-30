@@ -175,8 +175,16 @@ session_start();
 		}
     
         function moveRight() {
+			var selector = '#map > tbody > tr:nth-child(' + (user_y) + ') > td:nth-child(' + (user_x + 1) + ') > img';
+
+			var element = jQuery(selector);
+
+			console.log(element.hasClass('water'));
+
+			// Liigume ainult siis, kui ei ole vesi
+			if (!element.hasClass("water")) {            
             setUserLocation(user_x + 1, user_y);
-            console.log('Right');
+            }
         }
 
         function moveUp(){
