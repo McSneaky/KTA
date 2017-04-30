@@ -20,7 +20,7 @@ session_start();
 		 * Current user location
 		 *  
 		*/
-		#userLocaion{
+		#userLocation{
 			position: absolute;
 			top: 15px;
 			left: 15px;
@@ -51,44 +51,44 @@ session_start();
 		<table id="map" cellpadding="0" cellspacing="0">
 			<tbody>
 		    <tr>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		     </tr><tr>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		        <td><img src="./img/green.png" alt="green" height="42" width="42"></td>
 				<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
-				<td><img src="./img/red.png" alt="red" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img class="lava" src="./img/red.png" alt="red" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 			
 			</tr><tr>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 				<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-				<td><img src="./img/red.png" alt="red" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img class="lava" src="./img/red.png" alt="red" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 			
 		    </tr><tr>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-				<td><img src="./img/red.png" alt="red" height="42" width="42"></td>
+				<td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img class="lava" src="./img/red.png" alt="red" height="42" width="42"></td>
 		        <td><img src="./img/green.png" alt="green" height="42" width="42"></td>
 				<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 			
 		    </tr><tr>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		        <td><img src="./img/green.png" alt="green" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 				<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		    </tr><tr>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		     </tr>
 			</tbody>
 		</table>
@@ -120,14 +120,13 @@ session_start();
 		// This "inReady" runs after "run ASAP"
 		console.log("inReady");
 		
-		// ChangeUserLocaion
+		// ChangeUserLocation
 		setUserLocation(
 			// Get user X cordinate
 			<?php echo $_SESSION["user"]->getCharacter()->getLocation()->getX(); ?> + 1,
 			// Get user Y cordinate
 			<?php echo $_SESSION["user"]->getCharacter()->getLocation()->getY(); ?> + 1
 		);
-
 	});
 
 	/**
@@ -149,11 +148,11 @@ session_start();
 			console.log(selector);
 
 			// Remove old user location
-			jQuery('#userLocaion').remove();
+			jQuery('#userLocation').remove();
 
 			// Put user into new location
 			// Append appends current table cell with given value
-			jQuery(selector).append('<span id="userLocaion">X</span>');
+			jQuery(selector).append('<span id="userLocation">X</span>');
 
 			// Select map using pure JavaScript
 			// document.getElementById('map');
@@ -163,12 +162,16 @@ session_start();
 		}
 
 		function moveDown() {
-			setUserLocation(user_x, user_y + 1);
+			var selector = '#map > tbody > tr:nth-child(' + (user_y + 1) + ') > td:nth-child(' + (user_x) + ') > img';
 
-			var selector = '#map > tbody > tr:nth-child(' + (user_x) + ') > td:nth-child(' + (user_x) + ')';
-			
-			
-			console.log('Move down123');
+			var element = jQuery(selector);
+
+			console.log(element.hasClass('water'));
+
+			// Liigume ainult siis, kui ei ole vesi
+			if (!element.hasClass("water")) {
+				setUserLocation(user_x, user_y + 1);
+			}
 		}
     
         function moveRight() {
