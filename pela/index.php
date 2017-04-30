@@ -58,7 +58,7 @@ session_start();
 		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		     </tr><tr>
 				<td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/green.png" alt="green" height="42" width="42"></td>
+		        <td><img class="lava" src="./img/red.png" alt="green" height="42" width="42"></td>
 				<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
 				<td><img class="lava" src="./img/red.png" alt="red" height="42" width="42"></td>
 		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
@@ -72,8 +72,8 @@ session_start();
 			
 		    </tr><tr>
 				<td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
-				<td><img class="lava" src="./img/red.png" alt="red" height="42" width="42"></td>
-		        <td><img src="./img/green.png" alt="green" height="42" width="42"></td>
+				<td><img src="./img/green.png" alt="red" height="42" width="42"></td>
+				<td><img src="./img/green.png" alt="red" height="42" width="42"></td>
 				<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
 		        <td><img class="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 			
