@@ -37,6 +37,7 @@ session_start();
 <body>
 	<!-- Check if user is logged in or not -->
 	<?php if (isset($_SESSION['user'])) : ?>
+
 		<!-- If user is logged in, then show logout and user name -->
 		<p>
 			Signed in as 
@@ -44,6 +45,7 @@ session_start();
 			<?php echo $_SESSION["user"]->getUsername(); ?>
 		</p>
 		<br>
+
 
 		<!-- Hard coded map -->
 		<table id="map" cellpadding="0" cellspacing="0">
@@ -90,13 +92,13 @@ session_start();
 		     </tr>
 			</tbody>
 		</table>
-
 		<button onclick="moveDown()">↓</button>
-		<button>↑</button>
-		<button>→</button>
-		<button>←</button>
+		<button onclick="moveUp()">↑</button>
+		<button onclick="moveRight()">→</button>
+		<button onclick="moveLeft()">←</button>
 
 		<!-- Show log out link -->
+
 		<a href="./logout.php">Log Out</a>
 
 	<?php else : ?>
@@ -104,8 +106,8 @@ session_start();
 		<!-- If user is not logged in, then show register and loging in -->
 		<a href="./login.php">Login</a><br>
 		<a href="./register.php">Sign Up</a>
-	<?php endif; ?>
 
+	<?php endif; ?>
 
 <!-- Some half inline JS -->
 <script type="text/javascript">
@@ -163,8 +165,23 @@ session_start();
 			setUserLocation(user_x, user_y + 1);
 			console.log('Move down123');
 		}
+    
+        function moveRight() {
+            setUserLocation(user_x + 1, user_y);
+            console.log('Right');
+        }
+        function moveUp(){
+        setUserLocation(user_x, user_y - 1);
+			console.log('Move up123');    
+        }
+
+        function moveLeft(){
+        setUserLocation(user_x - 1, user_y);
+			console.log('Move left123');    
+        }
 	// This will run before document.ready part
 	console.log("run ASAP");
 </script>
+
 </body>
 </html>
