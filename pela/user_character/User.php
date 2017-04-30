@@ -6,7 +6,7 @@ require_once "Character.php";
 class User {
     
     //Kasutaja ID andmebaasis
-    private $id;	
+    public $id;	
 
     //kasutajanimi
 	private $username;

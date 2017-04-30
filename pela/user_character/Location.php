@@ -2,7 +2,7 @@
 
 class Location {
     
-    private $id;
+    public $id;
     private $x;
     private $y;
     

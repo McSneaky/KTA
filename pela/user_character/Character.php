@@ -2,7 +2,7 @@
 require_once "Location.php";
 class Character {
     
-    private $id;
+    public $id;
     private $name;
     private $expPoints;
     private $location;
