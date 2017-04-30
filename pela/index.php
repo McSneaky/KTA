@@ -164,26 +164,28 @@ session_start();
 		}
 
         function moveUp(){
+        	/**
+        	Algselt oli igas liikumise suunas selline lahendus, et kontrollida lava ja vee olemasolu
+        	Aga kuna see on pikk korduv kood igas funktsioonis, siis tegime liikumise kontrollist 
+        	eraldi funktsiooni checkMovement() all pool
+
 			var selector = '#map > tbody > tr:nth-child(' + (user_y - 1) + ') > td:nth-child(' + (user_x) + ') > img';
 
 			var element = jQuery(selector);
 
 			// Liigume ainult siis, kui ei ole vesi
 			if (!element.hasClass("water") && !element.hasClass("lava")) {
-				setUserLocation(user_x, user_y - 1);
 			}
 			console.log('Move up123');    
+			*/
+			if (checkMovement(user_x, user_y - 1)) {
+				setUserLocation(user_x, user_y - 1);
+			}
         }
 
 		function moveDown() {
-			var selector = '#map > tbody > tr:nth-child(' + (user_y + 1) + ') > td:nth-child(' + (user_x) + ') > img';
-
-			var element = jQuery(selector);
-
-			console.log(element.hasClass('water'));
-
 			// Liigume ainult siis, kui ei ole vesi
-			if (!element.hasClass("water") && !element.hasClass("lava")) {
+			if (checkMovement(user_x, user_y + 1)) {
 				setUserLocation(user_x, user_y + 1);
 			}
 		}
@@ -201,18 +203,22 @@ session_start();
 			}
         }
 			   
-
         function moveRight() {
-			var selector = '#map > tbody > tr:nth-child(' + (user_y) + ') > td:nth-child(' + (user_x + 1) + ') > img';
 
+			// Liigume ainult siis, kui ei ole vesi / lava
+            if (checkMovement(user_x + 1, user_y)) {
+				setUserLocation(user_x + 1, user_y);       
+            }
+        }
+
+        function checkMovement(next_x, next_y) {
+			var selector = '#map > tbody > tr:nth-child(' + (next_y) + ') > td:nth-child(' + (next_x) + ') > img';
 			var element = jQuery(selector);
 
-			console.log(element.hasClass('water'));
-
-			// Liigume ainult siis, kui ei ole vesi
-			if (!element.hasClass("water") && !element.hasClass("lava")) {            
-	            setUserLocation(user_x + 1, user_y);
-            }
+			// Liigume ainult siis, kui ei ole vesi ega laava
+			if (!element.hasClass("water") && !element.hasClass("lava")) {  
+				return 	true;
+			}
         }
 
 	// This will run before document.ready part
