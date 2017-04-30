@@ -37,6 +37,7 @@ session_start();
 <body>
 	<!-- Check if user is logged in or not -->
 	<?php if (isset($_SESSION['user'])) : ?>
+
 		<!-- If user is logged in, then show logout and user name -->
 		<p>
 			Signed in as 
@@ -93,10 +94,15 @@ session_start();
 		</table>
 		<button onclick="moveDown()">↓</button>
 		<button onclick="moveUp()">↑</button>
+<<<<<<< HEAD
 		<button onclick="moveRight()">→</button>
+=======
+		<button>→</button>
+>>>>>>> 142f2632edd766f0daa22b4d7904bb18b70ec41a
 		<button>←</button>
 
 		<!-- Show log out link -->
+
 		<a href="./logout.php">Log Out</a>
 
 	<?php else : ?>
@@ -104,6 +110,7 @@ session_start();
 		<!-- If user is not logged in, then show register and loging in -->
 		<a href="./login.php">Login</a><br>
 		<a href="./register.php">Sign Up</a>
+
 	<?php endif; ?>
 
 <!-- Some half inline JS -->
@@ -162,6 +169,7 @@ session_start();
 		function moveDown() {
 			setUserLocation(user_x, user_y + 1);
 			console.log('Move down123');
+<<<<<<< HEAD
 		}
     
         function moveUp() {
@@ -174,8 +182,16 @@ session_start();
             console.log('Right');
         }
 
+=======
+        }
+        function moveUp(){
+        setUserLocation(user_x - 2, user_y);
+			console.log('Move up123');    
+        }
+>>>>>>> 142f2632edd766f0daa22b4d7904bb18b70ec41a
 	// This will run before document.ready part
 	console.log("run ASAP");
 </script>
+
 </body>
 </html>
