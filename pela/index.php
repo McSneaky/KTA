@@ -11,6 +11,7 @@ session_start();
 <html>
 <head>
 	<title>KTA-16E pela</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 </head>
 <body>
 	<!-- Check if user is logged in or not -->
@@ -23,7 +24,7 @@ session_start();
 		</p>
 		<br>
 
-<table cellpadding="0" cellspacing="0">
+<table id="map" cellpadding="0" cellspacing="0">
 	<tbody>
     <tr>
 		<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
@@ -77,6 +78,20 @@ session_start();
 		<a href="./login.php">Login</a><br>
 		<a href="./register.php">Sign Up</a>
 	<?php endif; ?>
+
+<script type="text/javascript">
+    //$(document).ready(function() {
+    jQuery(document).ready(function() {
+        
+        setUserLocation(
+            <?php echo $user->character->location->x; ?>
+        );
+        
+    function setUserLocation(x, y) {
+        console.log($("#map"));
+        }
+    });
+</script>
 
 </body>
 </html>
