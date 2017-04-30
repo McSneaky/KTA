@@ -125,7 +125,6 @@ session_start();
 			// Get user Y cordinate
 			<?php echo $_SESSION["user"]->getCharacter()->getLocation()->getY(); ?> + 1
 		);
-
 	});
 
 	/**
@@ -163,7 +162,6 @@ session_start();
 		function moveDown() {
 			setUserLocation(user_x, user_y + 1);
 			console.log('Move down123');
-
 		}
 	// This will run before document.ready part
 	console.log("run ASAP");
