@@ -186,14 +186,30 @@ session_start();
             setUserLocation(user_x + 1, user_y);
             }
         }
+
         function moveUp(){
-        	setUserLocation(user_x, user_y - 1);
+			var selector = '#map > tbody > tr:nth-child(' + (user_y - 1) + ') > td:nth-child(' + (user_x) + ') > img';
+
+			var element = jQuery(selector);
+
+			// Liigume ainult siis, kui ei ole vesi
+			if (!element.hasClass("lava")) {
+				setUserLocation(user_x, user_y - 1);
+			}
 			console.log('Move up123');    
         }
 
         function moveLeft(){
-        	setUserLocation(user_x - 1, user_y);
-			console.log('Move left123');    
+            var selector = '#map > tbody > tr:nth-child(' + (user_y) + ') > td:nth-child(' + (user_x - 1) + ') > img';
+            
+            var element = jQuery(selector);
+            
+            console.log(element.hasClass('water'));
+            
+            if (!element.hasClass("water")) {
+				setUserLocation(user_x - 1, user_y);
+			}
+			   
         }
 	// This will run before document.ready part
 	console.log("run ASAP");
