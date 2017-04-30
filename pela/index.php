@@ -51,44 +51,44 @@ session_start();
 		<table id="map" cellpadding="0" cellspacing="0">
 			<tbody>
 		    <tr>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		     </tr><tr>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		        <td><img src="./img/green.png" alt="green" height="42" width="42"></td>
 				<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
-				<td><img src="./img/red.png" alt="red" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img id="lava" src="./img/red.png" alt="red" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 			
 			</tr><tr>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 				<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-				<td><img src="./img/red.png" alt="red" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img id="lava" src="./img/red.png" alt="red" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 			
 		    </tr><tr>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-				<td><img src="./img/red.png" alt="red" height="42" width="42"></td>
+				<td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img id="lava" src="./img/red.png" alt="red" height="42" width="42"></td>
 		        <td><img src="./img/green.png" alt="green" height="42" width="42"></td>
 				<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 			
 		    </tr><tr>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		        <td><img src="./img/green.png" alt="green" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 				<td><img src="./img/yellow.png" alt="yellow" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		    </tr><tr>
-				<td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
-		        <td><img src="./img/blue.png" alt="blue" height="42" width="42"></td>
+				<td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
+		        <td><img id="water" src="./img/blue.png" alt="blue" height="42" width="42"></td>
 		     </tr>
 			</tbody>
 		</table>
@@ -171,12 +171,14 @@ session_start();
             console.log('Right');
         }
         function moveUp(){
-        setUserLocation(user_x, user_y - 1);
+        	var newLocation = '#map > tbody > tr:nth-child(' + (user_x) + ') > td:nth-child(' + (x) + ')';
+        	console.log(newLocation);
+        	setUserLocation(user_x, user_y - 1);
 			console.log('Move up123');    
         }
 
         function moveLeft(){
-        setUserLocation(user_x - 1, user_y);
+        	setUserLocation(user_x - 1, user_y);
 			console.log('Move left123');    
         }
 	// This will run before document.ready part
