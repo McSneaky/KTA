@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			}
 
 			// Set charater to user
-			$user->setCharacter()
+			$user->setCharacter();
 		}
 		
 		// Save user to session
