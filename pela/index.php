@@ -213,6 +213,7 @@ session_start();
 	            setUserLocation(user_x + 1, user_y);
             }
         }
+        
 	// This will run before document.ready part
 	console.log("run ASAP");
 </script>
