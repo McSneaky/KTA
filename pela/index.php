@@ -51,5 +51,6 @@ session_start();
 		<!-- If user is not logged in, then show register and loging in -->
 		<a href="./login.php">Login</a><br>
 		<a href="./register.php">Sign Up</a>
+        <?php endif ?>
 </body>
 </html>
