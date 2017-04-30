@@ -162,6 +162,10 @@ session_start();
 			// jQuery("#map");
 		}
 
+		/**
+		 * Liikumis funktsioonid, üles, alla, vasakule, paremale
+		 * @return {[type]} [description]
+		 */
         function moveUp(){
         	/**
         	Algselt oli igas liikumise suunas selline lahendus, et kontrollida lava ja vee olemasolu
@@ -216,6 +220,12 @@ session_start();
             }
         }
 
+        /**
+         * Kontrolli, ega seal ei ole vett ega laavat, kuhu kasutaja tahab järgmisena liikuda
+         * @param  {int} 		next_x 	kasutaja järgmise sammu x kordinaat
+         * @param  {int} 		next_y 	kasutaja järgmise sammu y kordinaat
+         * @return {boolean}    		true, kui sammu saab teha
+         */
         function checkMovement(next_x, next_y) {
 			var selector = '#map > tbody > tr:nth-child(' + (next_y) + ') > td:nth-child(' + (next_x) + ') > img';
 			var element = jQuery(selector);
