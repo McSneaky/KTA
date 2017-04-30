@@ -92,8 +92,8 @@ session_start();
 			</tbody>
 		</table>
 		<button onclick="moveDown()">↓</button>
-		<button>↑</button>
-		<button>→</button>
+		<button onclick="moveUp()">↑</button>
+		<button onclick="moveRight()">→</button>
 		<button>←</button>
 
 		<!-- Show log out link -->
@@ -165,9 +165,15 @@ session_start();
 		}
     
         function moveUp() {
-            setUserLocation(user_x - 1, user_y);
+            setUserLocation(user_x, user_y - 1);
             console.log('Move up');
         }
+    
+        function moveRight() {
+            setUserLocation(user_x + 1, user_y);
+            console.log('Right');
+        }
+
 	// This will run before document.ready part
 	console.log("run ASAP");
 </script>
