@@ -92,14 +92,15 @@ session_start();
 		     </tr>
 			</tbody>
 		</table>
-		<button onclick="moveDown()">↓</button>
 		<button onclick="moveUp()">↑</button>
-		<button onclick="moveRight()">→</button>
+		<button onclick="moveDown()">↓</button>
 		<button onclick="moveLeft()">←</button>
-
+		<button onclick="moveRight()">→</button>
+		<br>
+		<br>
 		<!-- Show log out link -->
-
 		<a href="./logout.php">Log Out</a>
+
 
 	<?php else : ?>
 		<h1>Hello guest!</h1>
@@ -161,6 +162,18 @@ session_start();
 			// jQuery("#map");
 		}
 
+        function moveUp(){
+			var selector = '#map > tbody > tr:nth-child(' + (user_y - 1) + ') > td:nth-child(' + (user_x) + ') > img';
+
+			var element = jQuery(selector);
+
+			// Liigume ainult siis, kui ei ole vesi
+			if (!element.hasClass("water") && !element.hasClass("lava")) {
+				setUserLocation(user_x, user_y - 1);
+			}
+			console.log('Move up123');    
+        }
+
 		function moveDown() {
 			var selector = '#map > tbody > tr:nth-child(' + (user_y + 1) + ') > td:nth-child(' + (user_x) + ') > img';
 
@@ -174,30 +187,6 @@ session_start();
 			}
 		}
     
-        function moveRight() {
-			var selector = '#map > tbody > tr:nth-child(' + (user_y) + ') > td:nth-child(' + (user_x + 1) + ') > img';
-
-			var element = jQuery(selector);
-
-			console.log(element.hasClass('water'));
-
-			// Liigume ainult siis, kui ei ole vesi
-			if (!element.hasClass("water") && !element.hasClass("lava")) {            
-	            setUserLocation(user_x + 1, user_y);
-            }
-        }
-
-        function moveUp(){
-			var selector = '#map > tbody > tr:nth-child(' + (user_y - 1) + ') > td:nth-child(' + (user_x) + ') > img';
-
-			var element = jQuery(selector);
-
-			// Liigume ainult siis, kui ei ole vesi
-			if (!element.hasClass("water") && !element.hasClass("lava")) {
-				setUserLocation(user_x, user_y - 1);
-			}
-			console.log('Move up123');    
-        }
 
         function moveLeft(){
             var selector = '#map > tbody > tr:nth-child(' + (user_y) + ') > td:nth-child(' + (user_x - 1) + ') > img';
@@ -209,7 +198,20 @@ session_start();
             if (!element.hasClass("water") && !element.hasClass("lava")){
 				setUserLocation(user_x - 1, user_y);
 			}
+        }
 			   
+
+        function moveRight() {
+			var selector = '#map > tbody > tr:nth-child(' + (user_y) + ') > td:nth-child(' + (user_x + 1) + ') > img';
+
+			var element = jQuery(selector);
+
+			console.log(element.hasClass('water'));
+
+			// Liigume ainult siis, kui ei ole vesi
+			if (!element.hasClass("water") && !element.hasClass("lava")) {            
+	            setUserLocation(user_x + 1, user_y);
+            }
         }
 	// This will run before document.ready part
 	console.log("run ASAP");
