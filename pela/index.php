@@ -46,6 +46,7 @@ session_start();
 		</p>
 		<br>
 
+
 		<!-- Hard coded map -->
 		<table id="map" cellpadding="0" cellspacing="0">
 			<tbody>
@@ -91,10 +92,9 @@ session_start();
 		     </tr>
 			</tbody>
 		</table>
-
 		<button onclick="moveDown()">↓</button>
 		<button onclick="moveUp()">↑</button>
-		<button>→</button>
+		<button onclick="moveRight()">→</button>
 		<button onclick="moveLeft()">←</button>
 
 		<!-- Show log out link -->
@@ -108,7 +108,6 @@ session_start();
 		<a href="./register.php">Sign Up</a>
 
 	<?php endif; ?>
-
 
 <!-- Some half inline JS -->
 <script type="text/javascript">
@@ -166,11 +165,17 @@ session_start();
 		function moveDown() {
 			setUserLocation(user_x, user_y + 1);
 			console.log('Move down123');
+		}
+    
+        function moveRight() {
+            setUserLocation(user_x + 1, user_y);
+            console.log('Right');
         }
         function moveUp(){
         setUserLocation(user_x, user_y - 1);
 			console.log('Move up123');    
         }
+
         function moveLeft(){
         setUserLocation(user_x - 1, user_y);
 			console.log('Move left123');    
