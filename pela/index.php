@@ -182,7 +182,7 @@ session_start();
 			console.log(element.hasClass('water'));
 
 			// Liigume ainult siis, kui ei ole vesi
-			if (!element.hasClass("water")) {            
+			if (!element.hasClass("water")) {     
             setUserLocation(user_x + 1, user_y);
             }
         }
@@ -193,7 +193,7 @@ session_start();
 			var element = jQuery(selector);
 
 			// Liigume ainult siis, kui ei ole vesi
-			if (!element.hasClass("lava")) {
+			if (!element.hasClass("water") && !element.hasClass("lava")) {
 				setUserLocation(user_x, user_y - 1);
 			}
 			console.log('Move up123');    
