@@ -178,8 +178,16 @@ session_start();
             setUserLocation(user_x + 1, user_y);
             console.log('Right');
         }
+
         function moveUp(){
-        	setUserLocation(user_x, user_y - 1);
+			var selector = '#map > tbody > tr:nth-child(' + (user_y - 1) + ') > td:nth-child(' + (user_x) + ') > img';
+
+			var element = jQuery(selector);
+
+			// Liigume ainult siis, kui ei ole vesi
+			if (!element.hasClass("lava")) {
+				setUserLocation(user_x, user_y - 1);
+			}
 			console.log('Move up123');    
         }
 
