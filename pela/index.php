@@ -93,7 +93,7 @@ session_start();
 		</table>
 
 		<button onclick="moveDown()">↓</button>
-		<button>↑</button>
+		<button onclick="moveUp()">↑</button>
 		<button>→</button>
 		<button>←</button>
 
@@ -166,8 +166,11 @@ session_start();
 		function moveDown() {
 			setUserLocation(user_x - 1, user_y);
 			console.log('Move down123');
-
-		}
+        }
+        function moveUp(){
+        setUserLocation(user_x - 2, user_y);
+			console.log('Move up123');    
+        }
 	// This will run before document.ready part
 	console.log("run ASAP");
 </script>
