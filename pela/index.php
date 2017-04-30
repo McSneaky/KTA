@@ -95,7 +95,7 @@ session_start();
 		<button onclick="moveDown()">↓</button>
 		<button onclick="moveUp()">↑</button>
 		<button>→</button>
-		<button>←</button>
+		<button onclick="moveLeft()">←</button>
 
 		<!-- Show log out link -->
 
@@ -168,8 +168,12 @@ session_start();
 			console.log('Move down123');
         }
         function moveUp(){
-        setUserLocation(user_x - 2, user_y);
+        setUserLocation(user_x, user_y - 1);
 			console.log('Move up123');    
+        }
+        function moveLeft(){
+        setUserLocation(user_x - 1, user_y);
+			console.log('Move left123');    
         }
 	// This will run before document.ready part
 	console.log("run ASAP");
