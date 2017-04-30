@@ -1,7 +1,13 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Require user
 require_once './user_character/User.php';
+require_once './user_character/Character.php';
+require_once './user_character/Location.php';
+
 $config = include_once './config.php';
 include_once './dbconnect.php';
 
@@ -81,7 +87,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>

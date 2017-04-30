@@ -3,12 +3,11 @@ $config = include_once './config.php';
 include_once './user_character/User.php';
 include_once './dbconnect.php';
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 session_start();
-if ($user->getCharacter()) {
-	echo "Char on olemas";
-} else {
-	echo "Char ei eksisteeri";
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -41,8 +40,16 @@ if ($user->getCharacter()) {
 <body>
 	<!-- Check if user is logged in or not -->
 	<?php if (isset($_SESSION['user'])) : ?>
-		
-		
+		<?php 
+			if ($_SESSION["user"]->getCharacter()) {
+				echo "<pre>";
+				var_dump($_SESSION["user"]);
+				echo "</pre>";
+				echo "Char on olemas";
+			} else {
+				echo "Char ei eksisteeri";
+			}
+ 		?>		
 		<!-- If user is logged in, then show logout and user name -->
 		<p>
 			Signed in as 
