@@ -9,7 +9,7 @@ class Character {
     //konstruktor on ainult selle jaoks, et seada karakterile asukohaks 0. Hiljem peaks muidugi asukoha sisendi kuskilt mujalt
     //saama.
     public function __construct() {
-        $this-> location = new Location(0, 0);
+        $this-> location = new Location(2, 3);
     }
     
     public function getName() {
@@ -27,6 +27,10 @@ class Character {
     public function getTools() {
         return $this-> tools;
     }
+
+    public function getLocation(){
+        return $this->location;
+    }
     
     public function setName($name) {
         $this-> name = $name;
@@ -42,6 +46,10 @@ class Character {
     
     public function setTools($tools) {
         $this-> name = $tools;
+    }
+
+    public function setLocation($location){
+        $this->location = $location;
     }
     
     //liiguta karakterit kaardil ühe sammu võrra ülemisele ruudule. Tingimus on seatud selle pärast, et kaart saab mingil hetkel otsa.
