@@ -184,8 +184,16 @@ session_start();
         }
 
         function moveLeft(){
-        	setUserLocation(user_x - 1, user_y);
-			console.log('Move left123');    
+            var selector = '#map > tbody > tr:nth-child(' + (user_y) + ') > td:nth-child(' + (user_x - 1) + ') > img';
+            
+            var element = jQuery(selector);
+            
+            console.log(element.hasClass('water'));
+            
+            if (!element.hasClass("water")) {
+				setUserLocation(user_x - 1, user_y);
+			}
+			   
         }
 	// This will run before document.ready part
 	console.log("run ASAP");
