@@ -32,21 +32,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// Some random bulli kaka
 	if ($row = mysqli_fetch_array($result)) {
 
-
 		// Create new user with values from database
-
 		$user = new User($row['name'], $row['email']);
-
+		$userId = $row["id"];
+		
+				
+		$sql = "SELECT * FROM characters WHERE user_id = '$userId'";
+		
 		// Save user to session
 		$_SESSION['user'] = $user;
-
+		
 		// Redirect to index
 		header("Location: index.php");
-
-
-
-		// Stop server, so bots will fuck off
-		die("Stop fucking ignoring headers!");
+		// Stop server, so bots will move away
+		die("Stop ignoring headers!");
 
 	} else {
 		$errormsg = "Incorrect Email or Password!";
