@@ -37,7 +37,8 @@ session_start();
 <body>
 	<!-- Check if user is logged in or not -->
 	<?php if (isset($_SESSION['user'])) : ?>
-
+		
+		
 		<!-- If user is logged in, then show logout and user name -->
 		<p>
 			Signed in as 
@@ -213,7 +214,7 @@ session_start();
 	            setUserLocation(user_x + 1, user_y);
             }
         }
-        
+
 	// This will run before document.ready part
 	console.log("run ASAP");
 </script>
