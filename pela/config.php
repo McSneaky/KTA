@@ -3,7 +3,7 @@
 return (object) array(
 	'host' => 'localhost',
 	'username' => 'root',
-	'password' => '',
+	'password' => 'Nvm32B',
 	'database' => 'kta',
 );
 

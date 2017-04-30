@@ -120,9 +120,9 @@ session_start();
 		// ChangeUserLocaion
 		setUserLocation(
 			// Get user X cordinate
-			<?php echo $_SESSION["user"]->getCharacter()->getLocation()->getX(); ?>,
+			<?php echo $_SESSION["user"]->getCharacter()->getLocation()->getX(); ?> + 1,
 			// Get user Y cordinate
-			<?php echo $_SESSION["user"]->getCharacter()->getLocation()->getY(); ?>
+			<?php echo $_SESSION["user"]->getCharacter()->getLocation()->getY(); ?> + 1
 		);
 
 	});
@@ -138,10 +138,10 @@ session_start();
 			// tr:nth-child(1) selects first row 
 			// tr:nth-child(2) selects second row
 			// etc 
-			var selector = '#map > tbody > tr:nth-child(' + (y + 1) + ') > td:nth-child(' + (x + 1) + ')';
+			var selector = '#map > tbody > tr:nth-child(' + (y) + ') > td:nth-child(' + (x) + ')';
 
-			user_x = (x + 1);
-			user_y = (y + 1);
+			user_x = (x);
+			user_y = (y);
 			// Log selector to console for debugging
 			console.log(selector);
 
@@ -160,7 +160,7 @@ session_start();
 		}
 
 		function moveDown() {
-			setUserLocation(user_x - 1, user_y);
+			setUserLocation(user_x, user_y + 1);
 			console.log('Move down123');
 		}
     
