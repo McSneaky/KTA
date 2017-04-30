@@ -92,7 +92,7 @@ session_start();
 			</tbody>
 		</table>
 
-		<button>↓</button>
+		<button onclick="moveDown()">↓</button>
 		<button>↑</button>
 		<button>→</button>
 		<button>←</button>
@@ -112,6 +112,9 @@ session_start();
 
 <!-- Some half inline JS -->
 <script type="text/javascript">
+
+	var user_x = 0;
+	var user_y = 0;
 
 	// Wait for whole document to finish loading
 	jQuery(document).ready(function() {
@@ -141,6 +144,8 @@ session_start();
 			// etc 
 			var selector = '#map > tbody > tr:nth-child(' + (y + 1) + ') > td:nth-child(' + (x + 1) + ')';
 
+			user_x = (x + 1);
+			user_y = (y + 1);
 			// Log selector to console for debugging
 			console.log(selector);
 
@@ -156,6 +161,12 @@ session_start();
 
 			// Select map using jQuery
 			// jQuery("#map");
+		}
+
+		function moveDown() {
+			setUserLocation(user_x - 1, user_y);
+			console.log('Move down123');
+
 		}
 	// This will run before document.ready part
 	console.log("run ASAP");
