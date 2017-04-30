@@ -182,7 +182,7 @@ session_start();
         function moveUp(){
         	setUserLocation(user_x, user_y - 1);
 
-			var selector = '#map > tbody > tr:nth-child(' + (user_y + 1) + ') > td:nth-child(' + (user_x) + ') > img';
+			var selector = '#map > tbody > tr:nth-child(' + (user_y - 1) + ') > td:nth-child(' + (user_x) + ') > img';
 
 			var element = jQuery(selector);
 
