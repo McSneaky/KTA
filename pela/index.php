@@ -4,7 +4,11 @@ include_once './user_character/User.php';
 include_once './dbconnect.php';
 
 session_start();
-
+if ($user->getCharacter()) {
+	echo "Char on olemas";
+} else {
+	echo "Char ei eksisteeri";
+}
 ?>
 
 <!DOCTYPE html>

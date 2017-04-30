@@ -4,7 +4,10 @@ require_once "Character.php";
 require_once "Character.php";
 
 class User {
-	
+    
+    //Kasutaja ID andmebaasis
+    private $id;	
+
     //kasutajanimi
 	private $username;
     //email
@@ -12,7 +15,8 @@ class User {
     //karakter
     private $character;
     
-    public function __construct($username, $email) {
+    public function __construct($id, $username, $email) {
+        $this-> id = $id;
         $this-> username = $username;
         $this-> email = $email;
         $this-> character = new Character();

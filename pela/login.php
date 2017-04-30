@@ -33,11 +33,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ($row = mysqli_fetch_array($result)) {
 
 		// Create new user with values from database
-		$user = new User($row['name'], $row['email']);
-		$userId = $row["id"];
+		$user = new User($row["id"], $row['name'], $row['email']);
 		
-				
-		$sql = "SELECT * FROM characters WHERE user_id = '$userId'";
+		// Create SLQ query to ask for character who belongs to current user		
+		$sql = "SELECT * FROM characters WHERE user_id = '$user->id'";
+
+		// Run database query
+		$result = $database->query($sql);
+
+		// Fetch character query results
+		if ($row = mysqli_fetch_array($result)) {
+			
+			// Get saved character data and assign it to character object
+			$character = new Character($row["id"]);
+			$character->setName = $row["name"];
+
+
+
+			// Create SLQ query to ask for character location		
+			$sql = "SELECT * FROM locations WHERE character_id = '$character->id'";
+
+			// Run database query
+			$result = $database->query($sql);
+
+			// Fetch location and assign it to character
+			if ($row = mysqli_fetch_array($result)) {
+				$location = new Location($row["id"], $row["x"], $row["y"]);
+
+				// And set location to character
+				$character->setLocation($location);
+			}
+
+			// Set charater to user
+			$user->setCharacter()
+		}
 		
 		// Save user to session
 		$_SESSION['user'] = $user;

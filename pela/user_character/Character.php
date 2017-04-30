@@ -2,13 +2,15 @@
 require_once "Location.php";
 class Character {
     
+    private $id;
     private $name;
     private $expPoints;
     private $location;
     
     //konstruktor on ainult selle jaoks, et seada karakterile asukohaks 0. Hiljem peaks muidugi asukoha sisendi kuskilt mujalt
     //saama.
-    public function __construct() {
+    public function __construct($id) {
+        $this-> id = $id;
         $this-> location = new Location(2, 3);
     }
     

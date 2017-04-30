@@ -2,10 +2,12 @@
 
 class Location {
     
+    private $id;
     private $x;
     private $y;
     
-    public function __construct($x, $y) {
+    public function __construct($id, $x, $y) {
+        $this-> id = $id;
         $this-> x = $x;
         $this-> y = $y;
     }
