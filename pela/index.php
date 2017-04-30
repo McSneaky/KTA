@@ -202,17 +202,11 @@ session_start();
 			}
         }
 			   
-
         function moveRight() {
-			var selector = '#map > tbody > tr:nth-child(' + (user_y) + ') > td:nth-child(' + (user_x + 1) + ') > img';
 
-			var element = jQuery(selector);
-
-			console.log(element.hasClass('water'));
-
-			// Liigume ainult siis, kui ei ole vesi
-			if (!element.hasClass("water") && !element.hasClass("lava")) {            
-	            setUserLocation(user_x + 1, user_y);
+			// Liigume ainult siis, kui ei ole vesi / lava
+            if (checkMovement(user_x + 1, user_y)) {
+				setUserLocation(user_x + 1, user_y);       
             }
         }
 
