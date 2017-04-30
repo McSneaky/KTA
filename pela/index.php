@@ -164,6 +164,10 @@ session_start();
 
 		function moveDown() {
 			setUserLocation(user_x, user_y + 1);
+
+			var selector = '#map > tbody > tr:nth-child(' + (user_x) + ') > td:nth-child(' + (user_x) + ')';
+			
+			
 			console.log('Move down123');
 		}
     
@@ -172,12 +176,12 @@ session_start();
             console.log('Right');
         }
         function moveUp(){
-        setUserLocation(user_x, user_y - 1);
+        	setUserLocation(user_x, user_y - 1);
 			console.log('Move up123');    
         }
 
         function moveLeft(){
-        setUserLocation(user_x - 1, user_y);
+        	setUserLocation(user_x - 1, user_y);
 			console.log('Move left123');    
         }
 	// This will run before document.ready part
