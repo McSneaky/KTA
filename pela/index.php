@@ -176,7 +176,6 @@ session_start();
 
 		/**
 		 * Liikumis funktsioonid, üles, alla, vasakule, paremale
-		 * @return {[type]} [description]
 		 */
         function moveUp(){
         	/**
@@ -191,21 +190,22 @@ session_start();
 			// Liigume ainult siis, kui ei ole vesi
 			if (!element.hasClass("water") && !element.hasClass("lava")) {
 			}
-			console.log('Move up123');    
+			console.log('Move up123');
 			*/
 			if (checkMovement(user_x, user_y - 1)) {
 				setUserLocation(user_x, user_y - 1);
 			}
         }
 
+
 		function moveDown() {
-			// Liigume ainult siis, kui ei ole vesi
+			// Liigume ainult siis, kui ei ole vesi ega laava
 			if (checkMovement(user_x, user_y + 1)) {
 				setUserLocation(user_x, user_y + 1);
 			}
 		}
-    
-
+		
+		// Make things nice    
         function moveLeft(){
             var selector = '#map > tbody > tr:nth-child(' + (user_y) + ') > td:nth-child(' + (user_x - 1) + ') > img';
             
@@ -217,7 +217,10 @@ session_start();
 				setUserLocation(user_x - 1, user_y);
 			}
         }
-			   
+		
+		/**
+		 * Move character, if there is nothing on the way
+		 */
         function moveRight() {
 
 			// Liigume ainult siis, kui ei ole vesi / lava
@@ -233,7 +236,10 @@ session_start();
          * @return {boolean}    		true, kui sammu saab teha
          */
         function checkMovement(next_x, next_y) {
+        	// Tekitame selectori ruudule, kuhu liikuda tahame
 			var selector = '#map > tbody > tr:nth-child(' + (next_y) + ') > td:nth-child(' + (next_x) + ') > img';
+
+			// Selecteerime ruudu, mille selectori tegime eelmisel real
 			var element = jQuery(selector);
 
 			// Liigume ainult siis, kui ei ole vesi ega laava
@@ -242,7 +248,7 @@ session_start();
 			}
         }
 
-	// This will run before document.ready part
+	// See osa käivitub enne, kui document.ready sees olev
 	console.log("run ASAP");
 </script>
 
