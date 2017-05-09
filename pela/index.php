@@ -197,7 +197,7 @@ session_start();
 			}
         }
 
-
+        
 		function moveDown() {
 			// Liigume ainult siis, kui ei ole vesi ega laava
 			if (checkMovement(user_x, user_y + 1)) {
@@ -205,7 +205,8 @@ session_start();
 			}
 		}
 		
-		// Make things nice    
+		// Siis keegi võiks selle funktsiooni teha samamoodi ilusaks, nagu on ülejäänud liikumised
+		// 	kasutades checkMovement() abifunktsiooni
         function moveLeft(){
             var selector = '#map > tbody > tr:nth-child(' + (user_y) + ') > td:nth-child(' + (user_x - 1) + ') > img';
             
